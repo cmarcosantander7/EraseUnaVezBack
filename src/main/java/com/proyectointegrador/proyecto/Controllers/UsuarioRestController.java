@@ -18,7 +18,7 @@ public class UsuarioRestController {
     @Autowired
     private AuthService authService;
 
-    @CrossOrigin(origins = "https://cmarcosantander7.github.io/EraseUnaVezFront/")
+
     @PostMapping("/login")
     public ResponseEntity<UserResponse> login(@RequestBody UserRequest userRequest) throws Exception {
         UserResponse userResponse = authService.login(userRequest);
