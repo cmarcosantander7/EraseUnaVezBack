@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins= {"https://cmarcosantander7.github.io/EraseUnaVezFront"})
+@CrossOrigin(origins= {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api/auth")
 public class UsuarioRestController {
@@ -18,6 +18,7 @@ public class UsuarioRestController {
     @Autowired
     private AuthService authService;
 
+    @CrossOrigin(origins = "https://cmarcosantander7.github.io/EraseUnaVezFront/")
     @PostMapping("/login")
     public ResponseEntity<UserResponse> login(@RequestBody UserRequest userRequest) throws Exception {
         UserResponse userResponse = authService.login(userRequest);
