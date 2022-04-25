@@ -65,7 +65,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/get/image/**",
                         "/check/get/**",
                         "/fi/**",
-                        "/get/imagessss/**")
+                        "/get/imagessss/**",
+                        "/*")
                 .permitAll().anyRequest().authenticated()
                 .and().exceptionHandling().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
